@@ -10,7 +10,7 @@ import {
   IsNotEmpty,
   IsString,
   MaxLength,
-} from 'class-validator';
+} from 'class-validator'; // usa recursos do class-transformer
 
 export class CreateTransactionDto {
   @IsISO8601()
