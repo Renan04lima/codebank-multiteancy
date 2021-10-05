@@ -7,6 +7,7 @@ import { ConfigModule } from '@nestjs/config';
 import { Transaction } from './transactions/entities/transaction.entity';
 import { Account } from './accounts/entities/account.entity';
 import { AccountsModule } from './accounts/accounts.module';
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -26,7 +27,8 @@ import { AccountsModule } from './accounts/accounts.module';
       },
     }),
     TransactionsModule,
-    AccountsModule
+    AccountsModule,
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],
